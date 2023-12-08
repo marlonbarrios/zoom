@@ -451,12 +451,12 @@ function s(p) {
                 safePause(audio);
                 delete audio;
             })
-            // let audio = new Audio('./pop');
-            // audio.playbackRate = 0.5 + Math.random();
-            // safePlay(audio)
-            // audio.playbackRate = 0.5 + Math.random();
-            // setTimeout(() => { safePlay(audio) }, Math.random() * 50)
-            // return
+            let audio = new Audio('./pop.mp3');
+            audio.playbackRate = 0.5 + Math.random();
+            safePlay(audio)
+            audio.playbackRate = 0.5 + Math.random();
+            setTimeout(() => { safePlay(audio) }, Math.random() * 50)
+            return
         }
 
         if (frame < frames) {
@@ -504,7 +504,7 @@ function s(p) {
         }
 
         if ((frame - 1) % 75 == 0) {
-            var audio = new Audio('./whoosh');
+            var audio = new Audio('./whoosh.mp3');
             audio.playbackRate = 0.5 + Math.random();
             soundEffects.push(audio);
             safePlay(audio);
